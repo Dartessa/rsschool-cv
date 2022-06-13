@@ -1,0 +1,522 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('/rsschool-cv/Assets/fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('/rsschool-cv/Assets/fonts/poppins-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* poppins-600 - latin */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('/rsschool-cv/Assets/fonts/poppins-v20-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('/rsschool-cv/Assets/fonts/poppins-v20-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* poppins-900 - latin */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+         url('/rsschool-cv/Assets/fonts/poppins-v20-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('/rsschool-cv/Assets/fonts/poppins-v20-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+.mainWrapper {
+    max-width: 1600px;
+    margin: auto;
+    width: 98vw;
+
+}
+
+
+
+.sidenav {
+    height: 100vh; 
+    width: 335px; /* Set the width of the sidebar */
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #13111B; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    max-width: 1600px;
+   
+    
+}
+
+   
+
+.burgWrapper {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80px;
+    width: 335px; 
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    max-width: 1600px;
+    align-content: center;
+    }
+
+.logo {
+    display: flex;
+	flex-direction: column;
+    font-size: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-top: 8px;
+    
+}
+.logoName{
+    display: flex;
+	flex-direction: column;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 18px;
+    padding-left: 10px;
+    
+}
+.burger{
+   display: block;
+   width: 44px;
+   cursor: pointer;
+   margin: 16px;
+   border: none;
+   outline: none;
+   position: relative; 
+   background: none;  
+}
+
+.burger .bar, .burger:after, .burger:before {
+content: '';
+display: block;
+width: 100%;
+height: 4px;
+background-color: #ffffff;
+margin: 6px 0px ;
+transition: 0.4s;
+}
+
+.burger.isActive:before {
+ transform: rotate(-45deg) translate(-8px, 6px);
+}
+.burger.isActive .bar {
+    opacity: 0;
+}
+.burger.isActive:after {
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+
+
+.menuNav  {
+    position: fixed;
+    display:block;
+    top:  0px;
+    right: 100%;
+    height: 100vh; 
+    width: 335px;
+    z-index: 98;
+    background-color: #AE8250;
+    transition: 0.4s;
+} 
+
+.menuNav.isActive {
+left: 0px;
+}
+.itm, .menuNav {
+   display: block; 
+}
+ .menuNav .itm:hover{
+text-decoration: underline solid 6px;
+
+ }
+.itm {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 28px;
+
+}
+
+
+ul.menu {
+    padding-left: 50px;
+    padding-top: 100px;
+    list-style-type: none;
+    
+}
+.hSidenav1, .spT {
+color: #C5945C;
+padding-top: 30px;
+font-weight:600;
+}
+
+.hSidenav2 {
+    color: #ffffff;
+    padding-top: 16px;
+    }
+
+ 
+
+   
+   
+a.buttonD, a.buttonC {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 16px;
+    border: 2px solid #C5945C;
+    border-radius: 100px;
+    outline: none;
+    background: #C5945C no-repeat;
+    overflow: hidden;
+  }
+  a.buttonD:after {
+    content: "\bb";
+    position: relative;
+    bottom: 0;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 140%;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  a.buttonC:after {
+    content: ">";
+    position: relative;
+    bottom: 0;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 140%;
+    
+  }
+  a.buttonD:hover,a.buttonC:hover{
+    background-color: #ffffff00;
+    color: #C5945C;
+  }
+  a.buttonD:active:after {
+    bottom: -0.8em;
+    transition: .3s;
+    
+  } 
+  a.buttonC:active:after {
+    right: -0.5em;
+    transition: .3s;
+    
+  } 
+
+  .firstScreen {
+    background-image: url(./Assets/img/bg.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: row;
+  
+    height: 100vh;
+    width: 98vw;
+    max-width: 1600px;
+    max-height: 650px;
+     }
+ 
+.firstText  {
+	display: flex;
+	flex-direction: column;
+	flex: 2;
+	width: 35%;}
+
+.firstButton {
+    padding-top: 60px; 
+}
+
+.firstImage {
+    display: flex;
+	flex-direction: column;
+	width: 600px;
+    padding-right: 30px;
+    padding-top: 50px;
+    
+}
+
+h1 {
+    color: #C5945C;
+    font-size: 48px;
+    font-weight:900;
+    padding-top: 50px;
+   
+
+}
+.hello {
+    font-size: 30px;
+    width: 100%;
+    padding-top: 80px;
+}
+.offer {
+    padding-right: 135px;
+    padding-left: 385px;
+    width: 50%;   
+}
+.offerPadd {
+    padding-top: 50px;
+    padding-right: 135px;
+    padding-left: 385px;
+    width: 50%
+}
+
+
+.offerSize {
+    font-size: 16px;
+    line-height: 25px;
+    color: #ffffff;
+    padding-left: 385px;
+    padding-top: 35px;
+    width: 50%;
+}
+
+
+
+body {
+    background-color: #1A1925;
+    color: #ffffff;
+    font-family:'Poppins';
+    
+}
+
+h2 {
+    color: #C5945C;
+    font-size: 28px;
+    font-weight:900;  
+}
+
+
+
+.aboutWrapper  {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 375px;
+    padding-right: 135px;
+    height: 100%;
+}
+
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 25px;
+    padding-top: 30px;
+    width: 100%;
+    
+}   
+
+.imgAbout1 {
+    display: flex;
+    flex-direction: column; 
+     
+}
+
+.imgBl {
+    display: flex;
+    flex-direction: column; 
+    width: 200px;
+    height: 100%;
+    padding-right: 30px;
+    line-height: 25px;
+       
+}
+
+h3 {
+    color: #C5945C;
+    font-size: 22px;
+    font-weight:900; 
+    padding-bottom: 30px; 
+    padding-right: 30px;
+}   
+
+.im {
+    margin-top: 30px;
+}
+
+.short {
+ margin-top: 30px; 
+ line-height: 30px; 
+}
+
+.short1 {
+   line-height: 30px; 
+   }
+
+
+   .skillsWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    padding-top: 30px;
+    max-width: 1200px;
+    
+   } 
+   .softWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    
+   } 
+   
+   .skills {
+    display: block;
+    padding-top: 50px;
+    padding-left: 375px;
+    width: 1200px;
+    max-width:1200px;
+   }
+
+   .skillsImg {
+    padding-top: 16px;
+    width: 100px;
+   }
+   .sskillsImg {
+    
+    width: 50px;
+   }
+
+   .skillcoll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+     }
+
+   .skillsMain {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+
+   }
+
+   .skillsName {
+    font-size: 22px;
+    margin-top: 30px;
+    font-weight: 900;
+    text-align: center;
+    
+   
+    
+       }
+
+    .sLiU {
+       display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        padding-bottom: 40px;
+        
+        
+       }
+
+    .softLi {
+        text-decoration: none;
+        color:#AE8250;
+        cursor: none;
+        padding: 8px 16px;
+        border: 2px solid #C5945C;
+        border-radius: 100px;
+        outline: none;
+        overflow: hidden;
+        margin: 8px;
+        font-weight: 600;
+
+    }
+.padd {
+    padding-top: 16px;
+    text-align: center;
+    font-weight: 600;
+    
+}
+.paddLeft {
+    padding-left: 375px;
+    padding-top: 25px;
+    padding-right: 40px;
+}
+
+.expText {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+.expText1 {
+    font-size: 16px;
+    line-height: 25px;    
+}
+
+.date {
+    color: #ffffff8a;
+    }
+
+    pre {
+        line-height: 25px;
+    }
+.footWrapper {
+display: flex;
+
+}
+    
+.logos {
+padding-left: 375px;
+width: 98vw;
+max-width: 1200px;
+display: flex;
+flex-direction: row;
+justify-items: center;
+justify-content:flex-start;
+margin-bottom: 50px;
+margin-top: 50px;
+}
+
+
+.lofoRS {
+    height: 50px;
+   padding-right: 50px;
+   
+}
+
+
+.lofogt {
+ height: 50px;
+       
+}
+
+
+
+footer {
+    background-color: #ffffff05;
+    width: 98vw;
+    max-width: 1600px;
+}
